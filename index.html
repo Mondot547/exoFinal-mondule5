@@ -15,9 +15,11 @@
 
     <body>
         <header class="img-bg">
-            <img src="ressources/images/logo.svg" alt="logo">
-            <h1>HiTech.NET</h1>
-            <p>Tout le matériel Hight-Tech</p>
+            <div class="logo">
+                <img src="ressources/images/logo.svg" alt="logo">
+                <h1>HiTech.NET</h1>
+                <p>Tout le matériel Hight-Tech</p>
+            </div>
             <form action="post" class="search">
                 <input id="searchbar" type="text" name="search" placeholder=" Chercher un produit, une marque... >>> Tous les rayons...">
                 <select name="" id="">
@@ -38,7 +40,8 @@
         <main class="container">
             <nav class="secondary">
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-desktop"></i> Ordinateurs</a>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-desktop"></i> Ordinateurs</a>
                         <div class="sous">
                             <ul>
                                 <li>
@@ -224,8 +227,28 @@
                         <span><a href="#">Noir</a></span>
                     </div>
                     <div class="card">
-                        <div class="img-screen">
-                            <img src="ressources/images/product-1/slide-1-lg.jpg" alt="image d'ecran d'ordinateur">
+                        <div class="gallery">
+                            <div class="img-screen">
+                                <img src="ressources/images/product-1/slide-1-lg.jpg" alt="image d'ecran d'ordinateur">
+                                <p>Photos non contractuelles</p>
+                            </div>
+                            <ul class="gallery__list">
+                                <li>
+                                    <a class="gallery__link gallery__link_active"><img src="ressources/images/product-1/slide-1-md.jpg" alt="AOC 24B1XHS : Vignette du produit 1"></a>
+                                </li>
+                                <li>
+                                    <a class="gallery__link"><img src="ressources/images/product-1/slide-2-md.jpg" alt="AOC 24B1XHS : Vignette du produit 2"></a>
+                                </li>
+                                <li>
+                                    <a class="gallery__link"><img src="ressources/images/product-1/slide-3-md.jpg" alt="AOC 24B1XHS : Vignette du produit 3"></a>
+                                </li>
+                                <li>
+                                    <a class="gallery__link"><img src="ressources/images/product-1/slide-4-md.jpg" alt="AOC 24B1XHS : Vignette du produit 4"></a>
+                                </li>
+                                <li>
+                                    <a class="gallery__link"><img src="ressources/images/product-1/slide-5-md.jpg" alt="AOC 24B1XHS : Vignette du produit 5"></a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="info">
                             <p>Marque: AOC</p>
@@ -236,8 +259,8 @@
                                         <p>dont éco-participation 1€70</p>
                                     </div>
                                     <div class="btn-panier-list">
-                                        <a href="#">Ajouter au <br>panier</a>
-                                        <a href="#">Ajouter à ma liste <br>d'envie</a>
+                                        <a href="#">Ajouter au<br>panier</a>
+                                        <a href="#">Ajouter à ma liste<br>d'envie</a>
                                     </div>
                                 </div>
                                 <div class="gar">
@@ -526,9 +549,11 @@
                 </article>
             </section>
             <nav class="secondary">
+                <!-- nav--secondary -->
                 <ul>
                     <li><a href="#"><i class="fa-solid fa-desktop"></i> Ordinateurs</a>
                         <div class="sous">
+                            <!-- sub--nav -->
                             <ul>
                                 <li>
                                     <h2>Portables</h2>
@@ -690,14 +715,27 @@
             <div class="foorer1">
                 <div class="paiement">
                     <h4>Moyens de paiement</h4>
-                    <img src="ressources/images/payment.png" alt="image des moyens de paiements">
+                    <div class="group_element-footer">
+                        <div class="element_footer" id="btn1"></div>
+                        <div class="element_footer" id="btn2"></div>
+                        <div class="element_footer" id="btn3"></div>
+                        <div class="element_footer" id="btn4"></div>
+                    </div>
                 </div>
                 <div class="sociaux">
                     <h3>Sur les résaux sociaux</h3>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
                 <div class="propos1">
                     <h3>A propos</h3>
@@ -718,6 +756,28 @@
                 <p>Cet exercice de <span>3w Academy</span> est mis à disposition <span>pour l'usage personnel des étudiants. Pas de Rediffusion - Attribution - Pas de Rediffusion- Attribution - Pas d'Utilisation Commerciale - Pas de Modification - Internationl. Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de contact@3wa.fr</span>                    Maquette réalisé par <span>Stephane Pereck</span>.</p>
             </div>
         </footer>
+        <script type="text/javascript">
+            var mainImage = document.querySelector('.img-screen img');
+            var linkImages = document.querySelectorAll('.gallery__link');
+
+
+            linkImages.forEach(element => {
+                element.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    var target = event.currentTarget;
+                    var image = target.querySelector('img');
+
+                    // Change source of main image
+                    mainImage.src = image.src;
+
+                    // Modify display of the links list
+                    linkImages.forEach(link => link.classList.remove('gallery__link_active'));
+                    target.classList.add('gallery__link_active');
+
+                }, false);
+            })
+        </script>
     </body>
 
 </html>
