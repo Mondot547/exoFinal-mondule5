@@ -6,6 +6,8 @@
         <meta name="description" content="Tous le matériel Hight-Tech">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+        />
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <title>HiTech.NET</title>
@@ -14,46 +16,229 @@
     <body>
         <header class="img-bg">
             <img src="ressources/images/logo.svg" alt="logo">
-            <input id="searchbar" type="text" name="search" placeholder=" Chercher un produit, une marque... >>> Tous les rayons...">
+            <h1>HiTech.NET</h1>
+            <p>Tout le matériel Hight-Tech</p>
+            <form action="post" class="search">
+                <input id="searchbar" type="text" name="search" placeholder=" Chercher un produit, une marque... >>> Tous les rayons...">
+                <select name="" id="">
+                    <option value="0"></option>
+                    <option value="1">Ordinateurs</option>
+                    <option value="2">Périphériques & composants</option>
+                    <option value="3">Téléphones</option>
+                    <option value="4">Objets connectés</option>
+                </select>
+            </form>
             <nav class="primary">
                 <ul>
-                    <li><a href="">Mon compte</a></li>
-                    <li><a href="">Mon panier</a></li>
+                    <li><i class="fa-regular fa-user"></i><a href="">Mon compte</a></li>
+                    <li><i class="fa-solid fa-cart-shopping"></i><a href="">Mon panier</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
             <nav class="secondary">
                 <ul>
-                    <li><a href="#">Ordinateurs</a></li>
-                    <li><a href="#">Périphériques & composants</a></li>
-                    <li><a href="#">Téléphones</a></li>
-                    <li><a href="#">Objets connectés</a></li>
+                    <li><a href="#"><i class="fa-solid fa-desktop"></i> Ordinateurs</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Portables</h2>
+                                </li>
+                                <li><a href="#">PC Portable</a></li>
+                                <li><a href="#">Macbook</a></li>
+                                <li><a href="#">Extension mémoire</a></li>
+                                <li><a href="#">Disque dur 2"1/2</a></li>
+                                <li><a href="#">Sacs & sacoches</a></li>
+                                <li><a href="#">Refroidisseur</a></li>
+                                <li><a href="#">Station d'accueil</a></li>
+                                <li><a href="#">Chargeur</a></li>
+                                <li><a href="#">Garantie</a></li>
+                                <li><a href="#">Batterie</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Fixes</h2>
+                                </li>
+                                <li><a href="#">Ordinateur PC fixe</a></li>
+                                <li><a href="#">Ordinateur Apple</a></li>
+                                <li><a href="#">Barebone</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Tablettes</h2>
+                                </li>
+                                <li><a href="#">Tablette</a></li>
+                                <li><a href="#">iPad</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fa-solid fa-server"></i><a href="#">Périphériques & composants</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Périphériques</h2>
+                                </li>
+                                <li><a href="#">Écran PC</a></li>
+                                <li><a href="#">Clavier/souris</a></li>
+                                <li><a href="#">Imprimante</a></li>
+                                <li><a href="#">Clef USB</a></li>
+                                <li><a href="#">Disque dur externe</a></li>
+                                <li><a href="#">Onduleur</a></li>
+                                <li><a href="#">Enceinte PC</a></li>
+                                <li><a href="#">Casque audio</a></li>
+                                <li><a href="#">Casque VR</a></li>
+                                <li><a href="#">Musique pro</a></li>
+                                <li><a href="#">Tablette graphique</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Boitier</h2>
+                                </li>
+                                <li><a href="#">Alimentation</a></li>
+                                <li><a href="#">Disque dur</a></li>
+                                <li><a href="#">Disque SSD</a></li>
+                                <li><a href="#">Carte mère</a></li>
+                                <li><a href="#">Carte graphique</a></li>
+                                <li><a href="#">Mémoire PC</a></li>
+                                <li><a href="#">Processeur</a></li>
+                                <li><a href="#">Refroidissement</a></li>
+                                <li><a href="#">Kit upgrade PC</a></li>
+                                <li><a href="#">Batterie PC portable</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Imprimante</h2>
+                                </li>
+                                <li><a href="#">Cartouche</a></li>
+                                <li><a href="#">Toner</a></li>
+                                <li><a href="#">Ruban</a></li>
+                                <li><a href="#">Papier</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Connectique</h2>
+                                </li>
+                                <li><a href="#">Câbles PC</a></li>
+                                <li><a href="#" Adaptateurs PC></a></li>
+                                <li><a href="#">Parafoudre</a></li>
+                                <li><a href="#">Multiprise</a></li>
+                                <li><a href="#">Câble secteur</a></li>
+                                <li><a href="#">Câble HDMI</a></li>
+                                <li><a href="#">Switch HDMI</a></li>
+                                <li><a href="#">Adaptateur HDMI</a></li>
+                                <li><a href="#">Câble RJ45</a></li>
+                                <li><a href="#">Connectique RJ45</a></li>
+                                <li><a href="#">Câble RJ11/RJ12</a></li>
+                                <li><a href="#">Câble audio numérique</a></li>
+                                <li><a href="#">Câble audiophile</a></li>
+                                <li><a href="#">Adaptateur Audio</a></li>
+                                <li><a href="#">Câble audio Jack</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fa-solid fa-mobile"></i><a href="#">Téléphones</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Mobile</h2>
+                                </li>
+                                <li><a href="#">Mobile & smartphone</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Accessoires</h2>
+                                </li>
+                                <li><a href="#">Carte mémoire</a></li>
+                                <li><a href="#">Étuis</a></li>
+                                <li><a href="#">Kit piéton/casque</a></li>
+                                <li><a href="#">Batterie</a></li>
+                                <li><a href="#">Accessoires iPhone</a></li>
+                                <li><a href="#">Chargeur</a></li>
+                                <li><a href="#">Câble & adaptateur</a></li>
+                                <li><a href="#">Station d'accueil</a></li>
+                                <li><a href="#">Pile & chargeur</a></li>
+                                <li><a href="#">Batterie téléphone</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Objets connectés</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Maison</h2>
+                                </li>
+                                <li><a href="#">Caméra de surveillance</a></li>
+                                <li><a href="#">Détecteur & capteur</a></li>
+                                <li><a href="#">Kit alarme</a></li>
+                                <li><a href="#">Centrale multifonction</a></li>
+                                <li><a href="#">Enregistrement vidéo</a></li>
+                                <li><a href="#">Stations météo</a></li>
+                                <li><a href="#">Ampoule connectée</a></li>
+                                <li><a href="#">Enceinte connectée</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Loisirs</h2>
+                                </li>
+                                <li><a href="#">Drone</a></li>
+                                <li><a href="#">Gyropode</a></li>
+                                <li><a href="#">Accessoire drone</a></li>
+                                <li><a href="#">Montre connectée</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Sport</h2>
+                                </li>
+                                <li><a href="#">Montre running</a></li>
+                                <li><a href="#">Bracelet connecté</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
                 <div class="breadcrumbs">
                     <a href="#">Acceuil</a>
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
                     <a href="#">Périphériques & composants</a>
-                    <a href="#">Ecrans d'ordinateur</a>
-                    <p>AOC 24B1XHS</p>
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                    <a href="#">Ecrans d'ordinateur></a>
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                    <a href="#">AOC 24B1XHS</a>
                 </div>
             </nav>
             <section>
                 <h1>Aoc 24b1xhs</h1>
+                <div class="ancre">
+                    <a href="presentation">Presentation</a>
+                    <a href="descriptif">Descriptif</a>
+                    <a href="caracteristique">Caractéristiques techniques</a>
+                </div>
                 <article>
                     <h2>Présentation</h2>
                     <div class="ticket">
-                        ...
+                        <span><a href="#">1920 x 1080 pixels</a></span>
+                        <span><a href="#">7 ms</a></span>
+                        <span><a href="#">Format large 16/9</a></span>
+                        <span><a href="#">Dalle IPS</a></span>
+                        <span><a href="#">HDMI</a></span>
+                        <span><a href="#">VGA</a></span>
+                        <span><a href="#">Noir</a></span>
                     </div>
                     <div class="card">
                         <div class="img-screen">
-                            img
+                            <img src="ressources/images/product-1/slide-1-lg.jpg" alt="image d'ecran d'ordinateur">
                         </div>
                         <div class="info">
+                            <p>Marque: AOC</p>
                             <div class="prix">
-                                <p>109€94</p>
-                                <div class="btn-panier-list">
-                                    <a href="#">Ajouter au panier</a>
-                                    <a href="#">Ajouter à ma liste d'envie</a>
+                                <div class="container-flex">
+                                    <div class="prix-ecran">
+                                        <span>109€94</span>
+                                        <p>dont éco-participation 1€70</p>
+                                    </div>
+                                    <div class="btn-panier-list">
+                                        <a href="#">Ajouter au <br>panier</a>
+                                        <a href="#">Ajouter à ma liste <br>d'envie</a>
+                                    </div>
                                 </div>
                                 <div class="gar">
                                     <p>Garantie: 2 années vendeur</p>
@@ -79,7 +264,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="description">
+                <article class="description2">
                     <h2>Descriptif</h2>
                     <div class="float-left">
                         <h3>Un moniteur Full HD performant et tout en finesse</h3>
@@ -103,7 +288,7 @@
                         <img src="ressources/images/product-1/desc-2.jpg" alt="image montrant la qualité des couleurs de l'écran">
                     </div>
                 </article>
-                <article>
+                <article class="caracteristique">
                     <h2>Caractéristiques techniques</h2>
                     <div class="tableau1">
                         <h3>Affichage</h3>
@@ -340,12 +525,172 @@
                     </div>
                 </article>
             </section>
+            <nav class="secondary">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-desktop"></i> Ordinateurs</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Portables</h2>
+                                </li>
+                                <li><a href="#">PC Portable</a></li>
+                                <li><a href="#">Macbook</a></li>
+                                <li><a href="#">Extension mémoire</a></li>
+                                <li><a href="#">Disque dur 2"1/2</a></li>
+                                <li><a href="#">Sacs & sacoches</a></li>
+                                <li><a href="#">Refroidisseur</a></li>
+                                <li><a href="#">Station d'accueil</a></li>
+                                <li><a href="#">Chargeur</a></li>
+                                <li><a href="#">Garantie</a></li>
+                                <li><a href="#">Batterie</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Fixes</h2>
+                                </li>
+                                <li><a href="#">Ordinateur PC fixe</a></li>
+                                <li><a href="#">Ordinateur Apple</a></li>
+                                <li><a href="#">Barebone</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Tablettes</h2>
+                                </li>
+                                <li><a href="#">Tablette</a></li>
+                                <li><a href="#">iPad</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fa-solid fa-server"></i><a href="#">Périphériques & composants</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Périphériques</h2>
+                                </li>
+                                <li><a href="#">Écran PC</a></li>
+                                <li><a href="#">Clavier/souris</a></li>
+                                <li><a href="#">Imprimante</a></li>
+                                <li><a href="#">Clef USB</a></li>
+                                <li><a href="#">Disque dur externe</a></li>
+                                <li><a href="#">Onduleur</a></li>
+                                <li><a href="#">Enceinte PC</a></li>
+                                <li><a href="#">Casque audio</a></li>
+                                <li><a href="#">Casque VR</a></li>
+                                <li><a href="#">Musique pro</a></li>
+                                <li><a href="#">Tablette graphique</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Boitier</h2>
+                                </li>
+                                <li><a href="#">Alimentation</a></li>
+                                <li><a href="#">Disque dur</a></li>
+                                <li><a href="#">Disque SSD</a></li>
+                                <li><a href="#">Carte mère</a></li>
+                                <li><a href="#">Carte graphique</a></li>
+                                <li><a href="#">Mémoire PC</a></li>
+                                <li><a href="#">Processeur</a></li>
+                                <li><a href="#">Refroidissement</a></li>
+                                <li><a href="#">Kit upgrade PC</a></li>
+                                <li><a href="#">Batterie PC portable</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Imprimante</h2>
+                                </li>
+                                <li><a href="#">Cartouche</a></li>
+                                <li><a href="#">Toner</a></li>
+                                <li><a href="#">Ruban</a></li>
+                                <li><a href="#">Papier</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Connectique</h2>
+                                </li>
+                                <li><a href="#">Câbles PC</a></li>
+                                <li><a href="#" Adaptateurs PC></a></li>
+                                <li><a href="#">Parafoudre</a></li>
+                                <li><a href="#">Multiprise</a></li>
+                                <li><a href="#">Câble secteur</a></li>
+                                <li><a href="#">Câble HDMI</a></li>
+                                <li><a href="#">Switch HDMI</a></li>
+                                <li><a href="#">Adaptateur HDMI</a></li>
+                                <li><a href="#">Câble RJ45</a></li>
+                                <li><a href="#">Connectique RJ45</a></li>
+                                <li><a href="#">Câble RJ11/RJ12</a></li>
+                                <li><a href="#">Câble audio numérique</a></li>
+                                <li><a href="#">Câble audiophile</a></li>
+                                <li><a href="#">Adaptateur Audio</a></li>
+                                <li><a href="#">Câble audio Jack</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fa-solid fa-mobile"></i><a href="#">Téléphones</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Mobile</h2>
+                                </li>
+                                <li><a href="#">Mobile & smartphone</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Accessoires</h2>
+                                </li>
+                                <li><a href="#">Carte mémoire</a></li>
+                                <li><a href="#">Étuis</a></li>
+                                <li><a href="#">Kit piéton/casque</a></li>
+                                <li><a href="#">Batterie</a></li>
+                                <li><a href="#">Accessoires iPhone</a></li>
+                                <li><a href="#">Chargeur</a></li>
+                                <li><a href="#">Câble & adaptateur</a></li>
+                                <li><a href="#">Station d'accueil</a></li>
+                                <li><a href="#">Pile & chargeur</a></li>
+                                <li><a href="#">Batterie téléphone</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Objets connectés</a>
+                        <div class="sous">
+                            <ul>
+                                <li>
+                                    <h2>Maison</h2>
+                                </li>
+                                <li><a href="#">Caméra de surveillance</a></li>
+                                <li><a href="#">Détecteur & capteur</a></li>
+                                <li><a href="#">Kit alarme</a></li>
+                                <li><a href="#">Centrale multifonction</a></li>
+                                <li><a href="#">Enregistrement vidéo</a></li>
+                                <li><a href="#">Stations météo</a></li>
+                                <li><a href="#">Ampoule connectée</a></li>
+                                <li><a href="#">Enceinte connectée</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Loisirs</h2>
+                                </li>
+                                <li><a href="#">Drone</a></li>
+                                <li><a href="#">Gyropode</a></li>
+                                <li><a href="#">Accessoire drone</a></li>
+                                <li><a href="#">Montre connectée</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h2>Sport</h2>
+                                </li>
+                                <li><a href="#">Montre running</a></li>
+                                <li><a href="#">Bracelet connecté</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </main>
         <footer>
             <div class="foorer1">
                 <div class="paiement">
                     <h4>Moyens de paiement</h4>
-                    <img src="" alt="">
+                    <img src="ressources/images/payment.png" alt="image des moyens de paiements">
                 </div>
                 <div class="sociaux">
                     <h3>Sur les résaux sociaux</h3>

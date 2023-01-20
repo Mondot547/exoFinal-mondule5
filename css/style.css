@@ -1,3 +1,28 @@
+:root {
+    --bg-page: #eee;
+    --bg-element: #eee;
+    --bg-header: #0c6588;
+    --bg-menu: #e2f7ff;
+    --bg-main: #fff;
+    --bg-footer: #333;
+
+    --color-title: #333;
+    --color-text: #555;
+    --color-text-header: #e2f7ff;
+    --text-footer: #ddd;
+    --liens-footer: #eee;
+    --text-white: #fff;
+
+    --border-sm: 1px solid #eee;
+    --border-md: 1px solid #ddd;
+    --border-lg: 2px solid #ccc;
+
+    --shadow-sm: 0 0 1px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 0 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 0 5px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 html {
     font-size: 62.5%;
 }
@@ -5,4 +30,293 @@ html {
 body {
     margin: 0;
     padding: 0;
+    color: var(--color-text);
+}
+
+.container {
+    width: auto;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*******************************************
+HEADER
+*******************************************/
+
+.img-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text-header);
+    background-color: var(--bg-header);
+    background-image: url(../ressources/images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-header);
+}
+
+.img-bg h1 {
+    margin: 0;
+}
+
+
+.img-bg img {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(var(--shadow-sm));
+}
+
+.img-bg form {
+    opacity: 0;
+    margin: 0;
+}
+
+.img-bg p {
+    margin-bottom: 0;
+}
+
+.img-bg .primary ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 2rem 0;
+}
+
+.img-bg .primary li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-bg .primary li .fa-user,
+.img-bg .primary li .fa-cart-shopping {
+    font-size: 2rem;
+}
+
+.img-bg .primary li a {
+    text-decoration: none;
+    color: var(--color-text-header);
+}
+
+.img-bg .secondary {
+    text-align: center;
+}
+
+.secondary ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+    background-color: var(--bg-menu);
+    margin: 0;
+}
+
+
+.secondary ul li {
+    padding: 0.8em;
+    color: var(--bg-header);
+    text-align: center;
+}
+
+
+.secondary ul li a {
+    text-decoration: none;
+    color: var(--bg-header);
+}
+
+
+.secondary .sous {
+    display: none;
+}
+
+.secondary>ul li:hover .sous,
+.secondary>ul li:active .sous,
+.secondary>ul li:focus-within .sous {
+    display: block;
+    padding: 0;
+}
+
+.secondary .breadcrumbs {
+    opacity: 0;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.secondary .breadcrumbs a {
+    color
+}
+
+section .ancre {
+    display: flex;
+    flex-direction: column;
+}
+
+section .ancre a {
+    color: var(--bg-header);
+}
+
+section .ticket {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+section .ticket span {
+    width: auto;
+    border: 1px solid #333;
+    padding: 0.5em;
+}
+
+section .ticket span a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+section .card {
+    display: flex;
+    flex-direction: column;
+}
+
+section .card .img-screen {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+section .card .img-screen img {
+    width: 100%;
+
+}
+
+.card .info {
+
+    margin: 0 auto;
+}
+
+.card .info .prix {
+    background-color: var(--bg-element);
+    padding: 0;
+}
+
+.info .prix .container-flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.info .prix .container-flex .btn-panier-list {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.btn-panier-list a:first-child {
+    background-color: var(--bg-header);
+    text-align: center;
+    color: var(--color-text-header);
+    padding: 1em 2em;
+    margin-bottom: 0;
+}
+
+.container-flex .prix-ecran {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 1rem;
+    text-align: center;
+}
+
+.container-flex .prix-ecran span {
+    font-size: 3rem;
+}
+
+.btn-panier-list a {
+    background-color: var(--text-white);
+    color: var(--bg-header);
+    text-align: center;
+    padding: 0.8em 2em;
+    text-decoration: none;
+}
+
+.prix .gar {
+    width: 100%;
+    text-align: center;
+    background-color: var(--text-footer);
+}
+
+.prix .gar p {
+    padding: 1em;
+    margin-top: 0;
+}
+
+section .description,
+section .description2 {
+    width: 100%;
+}
+
+.description2 {
+    margin: 0 auto;
+}
+
+.description img,
+.description2 img {
+    width: 100%;
+    border: var(--border-sm);
+}
+
+.caracteristique {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.caracteristique table {
+    border: var(--border-lg);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.caracteristique table tr {
+    border: var(--border-sm);
+}
+
+.caracteristique table td {
+    padding: 0.5rem;
+}
+
+.caracteristique .tableau1,
+.tableau2,
+.tableau3,
+.tableau4,
+.tableau5,
+.tableau6,
+.tableau7 {
+    margin: 0 auto;
+}
+
+.tableau7 {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: var(--bg-footer);
+    padding: 3em 1em 1em 1em;
+    text-align: center;
+    color: var(--text-white);
+}
+
+footer .paiement img {
+    width: 100%;
+
 }

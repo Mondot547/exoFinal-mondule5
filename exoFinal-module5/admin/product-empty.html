@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=, maximum-scale="> -->
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+
+        <nav >
+        	<button  type="button" data-toggle="collapse" data-target="#navbar-1" aria-controls="navbar-1" aria-expanded="false" aria-label="Toggle navigation">
+        		<span ></span>
+        	</button>
+        	<a  href="#">
+        		<img src="images/logo.svg" width="30" height="30"  alt="" loading="lazy">
+        		HiTech.NET
+        	</a>
+        	<div  >
+        		<h1 >Produit: (NOUVEAU)</h1>
+        		<ul >
+        			<li >
+        				<a  href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        					<img alt="Avatar de Bob" src="images/avatar.png" width="48"> Bob
+        				</a>
+        				<div  aria-labelledby="navbar-1-dropdown">
+        					<a  href="#"><i ></i> Mon compte</a>
+        					<div ></div>
+        					<a  href="#"><i ></i> Déconnexion</a>
+        				</div>
+        			</li>
+        		</ul>
+        	</div>
+        </nav>
+        <div >
+        	<div >
+        		<aside >
+        		<h4 ><i ></i> Accueil</h4>
+        		<nav >
+        			<a  href="#">Tableau de bord</a>
+        		</nav>
+        		<h4 ><i ></i> Site web</h4>
+        		<nav >
+        			<a  href="#">Gestion des rubriques</a>
+        			<a  href="#">Gestion des actualités</a>
+        		</nav>
+        		<h4 ><i ></i> Boutique</h4>
+        		<nav >
+        			<a  href="#">Gestion des rayons</a>
+        			<a  href="products.html">Gestion des produits</a>
+        			<a  href="#">Gestion des commandes</a>
+        		</nav>
+        		<h4 ><i ></i> Paramètres</h4>
+        		<nav >
+        			<a  href="#">Gestion des utilisateurs</a>
+        			<a  href="#">Gestion des rôles</a>
+        			<a  href="#">Préférences</a>
+        		</nav>
+        		</aside>
+        		<main >
+        			<form>
+        				<div >
+        					<a  href="products.html"><i ></i> Annuler les modifications</a>
+        					<button ><i ></i> Valider et enregistrer la fiche</button>
+        				</div>
+        				<fieldset >
+        					<legend>Gestion</legend>
+        					<div >
+        						<div >Statut</div>
+        						<div >
+        							<div >
+        								<input  type="radio"  name="product_status" value="draft" checked>
+        								<label  for="product_status_draft">En attente de mise en ligne</label>
+        							</div>
+        							<div >
+        								<input  type="radio"  name="product_status" value="ok">
+        								<label  for="product_status_ok">En boutique</label>
+        							</div>
+        							<div >
+        								<input  type="radio"  name="product_status" value="off">
+        								<label  for="product_status_off">Retiré</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="store" >Boutique</label>
+        						<div >
+        							<select   name="store">
+        								<option value="0">Choisir une boutique ...</option>
+        								<option value="1">Ordinateurs</option>
+        								<option value="2">Péripheriques &amp; composants</option>
+        								<option value="3">Téléphones</option>
+        								<option value="4">Objets connectés</option>
+        							</select>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="shelf" >Rayon</label>
+        						<div >
+        							<select   name="shelf">
+        								<option value="0">Choisir un rayon ...</option>
+        								<option value="2-1">Ecrans d'ordinateur</option>
+        							</select>
+        						</div>
+        					</div>
+        				</fieldset>
+        				<fieldset >
+        					<legend>Présentation</legend>
+        					<div >
+        						<label for="product_brand" >Marque</label>
+        						<div >
+        							<input type="text"   name="product_brand" value="">
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_ref" >Référence du produit</label>
+        						<div >
+        							<input type="text"   name="product_ref" value="">
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_tags" >Etiquettes</label>
+        						<div >
+        							<input type="text"   name="product_tags" value="">
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_price" >Prix</label>
+        						<div >
+        							<div >
+        								<div >
+        									<span >Prix</span>
+        								</div>
+        								<input type="number"   name="product_price" value="">
+        								<div >
+        									<span >€</span>
+        								</div>
+        								<div >
+        									<span >éco-participation</span>
+        								</div>
+        								<input type="number"  name="product_price_eco" value="">
+        								<div >
+        									<span >€</span>
+        								</div>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_desc_0" >Description principale (MarkDown)</label>
+        						<div >
+        							<textarea   name="product_desc_0" rows="20"></textarea>
+        						</div>
+        					</div>
+        				</fieldset>
+        				<fieldset >
+        					<legend>Photos</legend>
+        					<div >
+        						<label for="product_photo_1" >Photo 1</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_photo_1">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_photo_2" >Photo 2</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_photo_2">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_photo_3" >Photo 3</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_photo_3">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_photo_4" >Photo 4</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_photo_4">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_photo_5" >Photo 5</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_photo_5">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        				</fieldset>
+        				<fieldset >
+        					<legend>Descriptif 1</legend>
+        					<div >
+        						<label for="product_desc_1_title" >Titre</label>
+        						<div >
+        							<input type="text"   name="product_desc_1_title" value="">
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_desc_1_file" >Image</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_desc_1_file">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_desc_1_text" >Texte</label>
+        						<div >
+        							<textarea   name="product_desc_1_text" rows="12"></textarea>
+        						</div>
+        					</div>
+        				</fieldset>
+        				<fieldset >
+        					<legend>Descriptif 2</legend>
+        					<div >
+        						<label for="product_desc_2_title" >Titre</label>
+        						<div >
+        							<input type="text"   name="product_desc_2_title" value="">
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_desc_2_file" >Image</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_desc_2_file">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_desc_2_text" >Texte</label>
+        						<div >
+        							<textarea   name="product_desc_2_text" rows="12"></textarea>
+        						</div>
+        					</div>
+        				</fieldset>
+        				<fieldset >
+        					<legend>Descriptif 3</legend>
+        					<div >
+        						<label for="product_desc_3_title" >Titre</label>
+        						<div >
+        							<input type="text"   name="product_desc_3_title" value="">
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_desc_3_file" >Image</label>
+        						<div >
+        							<div >
+        								<input type="file"   name="product_desc_3_file">
+        								<label  for="form_control_file" data-browse="Parcourir">Choisir un fichier</label>
+        							</div>
+        						</div>
+        					</div>
+        					<div >
+        						<label for="product_desc_3_text" >Texte</label>
+        						<div >
+        							<textarea   name="product_desc_3_text" rows="12"></textarea>
+        						</div>
+        					</div>
+        				</fieldset>
+        			</form>
+        		</main>
+        	</div>
+        </div>
+    </body>
+</html>
